@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <h1>Welcome to human activity prediction applicaiton</h1>
+        
+            <form action="/predict" method="POST">
+                <label for="accX"> Enter the value for accX:></label><br>
+                <input type="number" step="0.0000001" name="accX" id="accX" required><br>
+                <label for="accY"> Enter the value for accY:></label><br>
+                <input type="number" step="0.0000001"  name="accY" id="accY" required><br>
+                <label for="accZ"> Enter the value for accZ:></label><br>
+                <input type="number" step="0.0000001" name="accZ" id="accZ" required><br>
+                <label for="gyroX"> Enter the value for gyroX:></label><br>
+                <input type="number" step="0.0000001" name="gyroX" id="gyroX" required><br>
+                <label for="gyroY"> Enter the value for gyroY:></label><br>
+                <input type="number" step="0.0000001" name="gyroY" id="gyroY" required><br>
+                <label for="gyroZ"> Enter the value for gyroZ:></label><br>
+                <input type="number" step="0.0000001" name="gyroZ" id="gyroZ" required><br>
+                <button type="submit"> Submit </button>              
+
+            </form>
+            <h2> The prediction of human activity is:{{results}}</h2>
+        
+    </body>
+</html>
