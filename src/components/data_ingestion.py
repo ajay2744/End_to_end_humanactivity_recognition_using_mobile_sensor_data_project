@@ -30,8 +30,8 @@ class DataIngestion:
         logging.info("Initiated data ingestion component")
 
         try:
-            df=pd.read_csv("notebook\data\Data.csv").drop(columns=['timestamp'],axis=1)
-            logging.info("Read data as dataframe")
+            df=pd.read_csv("notebook\data\Data.csv").drop(columns=['timestamp'],axis=1).drop_duplicates(ignore_index=True)
+            logging.info("Read data as dataframe dropped irrelevent rows and columns")
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path),exist_ok=True)
 
             df.to_csv(self.ingestion_config.raw_data_path,index=False,header=True)
